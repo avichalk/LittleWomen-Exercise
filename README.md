@@ -77,6 +77,6 @@ You can find the above number with a single command line :).
 <details>
   <summary> Click me if things get too complicated and you still want to get to the end (don't spoil yourself!) </summary>
   
-  `secret.zip` decompress with `683.1352.457.640`. The format of your command is: `grep -o -w "{character_name}" LittleWomen.txt | wc -l`, where {character_name} should be replaced with Meg, Beth, Jo and Amy.
+  `secret.zip` decompress with `683.459.1355.645`. The format of your command is: `grep -o -w "{character_name}" LittleWomen.txt | wc -l`, where {character_name} should be replaced with Meg, Beth, Jo and Amy.
 
 </details>
