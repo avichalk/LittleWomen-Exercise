@@ -4,15 +4,17 @@
   <img src='https://static01.nyt.com/images/2020/01/03/books/review/24littlewomen1/24littlewomen1-videoSixteenByNineJumbo1600-v2.jpg' width='500'>
 </p>
 
+This is a lightly modified version of CosiMichele's original exercise: https://github.com/CosiMichele/LittleWomen-Exercise
+
 Hello folks! If you got here that means you have survived the December 9th-10th Carpentries workshop at the University of Arizona!
 
-Learning Shell, Python and Git can be extremely confusing, and quite overwhelming, therefore be proud of yourself!
+Learning Shell, R and Git can be extremely confusing, and quite overwhelming, therefore be proud of yourself!
 
 ## Tying It All Together
 
-This repository's goal is to bring together the materials covered this past couple of days, by using Bash, Git and Python. We are going to use the novel Little Women (`LittleWomen.txt`) from yesterday's `shell-lesson-data` folder in order to reinforce your computational learning experience.
+This repository's goal is to bring together the materials covered this past couple of days, by using Bash, Git and R. We are going to use the novel Little Women (`LittleWomen.txt`) from yesterday's `shell-lesson-data` folder in order to reinforce your computational learning experience.
 
-The 4 main protagonists of the book - Meg, Jo, Beth, and Amy - are here to help us figuring out what is within the 2 secret zip files in this repository! Meg has the key to finding out what is behind `secret-1.zip` whilst Jo, Beth and Amy are here to help us with `secret-2.zip`. 
+The 4 main protagonists of the book - Meg, Jo, Beth, and Amy - are here to help us figuring out what is within the secret zip file in this repository! Meg, Jo, Beth and Amy have the key to finding out what is behind `secret.zip`. 
 
 Following, you're going to find instructions which you can follow at your own pace.
 
@@ -23,21 +25,19 @@ In this repository, you'll find the following structure:
 ```
 .
 ├── README.md                   <- This file
-├── secret-1.zip                <- Compressed file #1
-└── secret-2.zip                <- Compressed file #2
+└── secret.zip                <- Compressed file #1
 ```
-Each of the `zip` files should be decompressed in order to finish the exercise 🙂. 
+The `zip` file should be decompressed in order to finish the exercise 🙂. 
 
-The first file (`secret-1.zip`) is protected by a 3 digit password (formatted: `xxx`), whilst the second (`secret-2.zip`) will be protected by 3 numbers separated by dots (formatted: `xxxx.xxx.xxx`).
+The file `secret.zip` is protected by 4 numbers separated by dots (formatted: `xxx.xxxx.xxx.xxx`).
 
 ## Instructions
 
 1. Import this repository to your GitHub account.
 2. Clone the imported repository to your machine.
 3. Navigate to the example folder from yesterday and find `LittleWomen.txt` (located in `shell-lesson-data/exercise-data/writing/LittleWomen.txt`) and copy it to the newly cloned repository.
-4. Decompressing `secret-1.zip`:
-     - Using the command line*, find how many times Meg, one of Little Women's main protagonists, gets mentioned. The answer will be the password to opening the file.
-5. Decompressing `secret-1.zip` revealed a Jupyter Notebook! Add, commit, and push your changes back to GitHub so that you can run the Jupyter Notebook using Colab (or run it on your machine). Follow the instructions in the Jupyter Notebook to find out what numbers will open the second secret!
+4. Decompressing `secret.zip`:
+     - Using the command line*, find how many times Meg, Jo, Beth and Amy get mentioned. The answer will be the password to opening the file.
 
 ### *Command line help
 
@@ -64,7 +64,7 @@ You can find the above number with a single command line :).
 <details>
   <summary> wc hint </summary>
   
-  use `-l` with `wc`! (such as `wc -l`): This command counts the number of lines in the input it receives. Since we used `grep` with the `-o` option, each line will correspond to an occurrence of the word "Meg".
+  use `-l` with `wc`! (such as `wc -l`): This command counts the number of lines in the input it receives. Since we used `grep` with the `-o` option, each line will correspond to an occurrence of the word you are looking for.
 
 </details>
 
@@ -77,7 +77,6 @@ You can find the above number with a single command line :).
 <details>
   <summary> Click me if things get too complicated and you still want to get to the end (don't spoil yourself!) </summary>
   
-  `secret-1.zip` decompress with `683`. The one liner: `grep -o -w "Meg" LittleWomen.txt | wc -l`
-  
-  `secret-2.zip` decompress with `1352.457.640` (almost like an IP address 😉)
+  `secret.zip` decompress with `683.1352.457.640`. The format of your command is: `grep -o -w "{character_name}" LittleWomen.txt | wc -l`, where {character_name} should be replaced with Meg, Beth, Jo and Amy.
+
 </details>
