@@ -25,7 +25,7 @@ In this repository, you'll find the following structure:
 ```
 .
 ├── README.md                   <- This file
-└── secret.zip                <- Compressed file #1
+└── secret.zip                <- Compressed file
 ```
 The `zip` file should be decompressed in order to finish the exercise 🙂. 
 
